@@ -42,6 +42,9 @@ let stringNumber = String(someNumber)
 // 1. Implicit Conversion - automatic type conversion
 // 2. Explicit Conversion - manual type conversion
 
+
+// JavaScript Implicit Conversion
+
 // Example 1: Implicit Conversion to String
 
 let result;
@@ -159,3 +162,166 @@ undefNum = true + undefined
 
 undefNum = null + undefined
 // console.log(undefNum);  // NaN
+
+
+
+
+// JavaScript Explicit Conversion
+
+/* 1. Convert to Number Explicitly
+To convert numeric strings and boolean values to numbers, you can use Number() */
+
+let convertNum;
+// string to number
+result = Number('324')
+// console.log(result);  // 324
+
+result = Number('324e-1')
+// console.log(result);   // 32.4
+
+// boolean to number
+result = Number(true)
+// console.log(result);  // 1
+
+result = Number(false)
+// console.log(result);  // 0
+
+// empty strings and null values return 0
+let empNull;
+empNull = Number(null)
+// console.log(empNull)  // 0
+
+empNull = Number(' ')
+// console.log(empNull)   // 0
+
+
+
+// If a string is an invalid number, the result will be NaN.
+let invalidStr;
+invalidStr = Number("Prabhat")
+// console.log(invalidStr)  // NaN
+
+invalidStr = Number(undefined)
+// console.log(invalidStr)  // NaN
+
+invalidStr = Number(NaN)
+// console.log(invalidStr)  // NaN
+
+
+
+/* Note: You can also generate numbers from strings using parseInt(), 
+parseFloat(), unary operator + and Math.floor().*/
+
+let parseNum;
+parseNum = parseInt('20.01')
+// console.log(parseNum);  // 20
+
+parseNum = parseFloat('20.01')
+// console.log(parseNum);  // 20.01
+
+parseNum = +'20.01'
+// console.log(parseNum);  // 20.01
+
+parseNum = Math.floor('20.01')
+// console.log(parseNum);  // 20
+
+
+
+
+/* 2. Convert to String Explicitly
+To convert other data types to strings, you can use either String() or toString().*/
+
+// number to string
+let numToStr;
+numToStr = String(324)
+// console.log(numToStr)
+// console.log(typeof numToStr)
+
+numToStr = String(2 + 6)
+// console.log(numToStr)  // 8
+// console.log(typeof numToStr)
+
+// other dataTypes to String
+numToStr = String(null)
+// console.log(numToStr)
+// console.log(typeof numToStr)
+
+numToStr = String(undefined)
+// console.log(numToStr)
+// console.log(typeof numToStr)
+
+numToStr = String(NaN)
+// console.log(numToStr)
+// console.log(typeof numToStr)
+
+numToStr = String(true)
+// console.log(numToStr)
+// console.log(typeof numToStr)
+
+numToStr = String(false)
+// console.log(numToStr)
+// console.log(typeof numToStr)
+
+// using toString()
+numToStr = (324).toString()
+// console.log(numToStr)
+// console.log(typeof numToStr)
+
+numToStr = true.toString()
+// console.log(numToStr)
+// console.log(typeof numToStr)
+
+/* Note: String() takes null and undefined and converts them to string.
+ However, toString() gives error when null are passed.*/
+
+
+
+
+ /*  3. Convert to Boolean Explicitly
+To convert other data types to a boolean, you can use Boolean().
+In JavaScript, undefined, null, 0, NaN, '' converts to false. */
+
+let convBoolean;
+convBoolean = Boolean('');
+// console.log(convBoolean); // false
+
+convBoolean = Boolean(0);
+// console.log(convBoolean); // false
+
+convBoolean = Boolean(undefined);
+// console.log(convBoolean); // false
+
+convBoolean = Boolean(null);
+// console.log(convBoolean); // false
+
+convBoolean = Boolean(NaN);
+// console.log(convBoolean); // false
+
+
+
+// All other values give true.
+convBoolean2 = Boolean(324);
+// console.log(convBoolean2); // true
+
+convBoolean2 = Boolean('hello');
+// console.log(convBoolean2); // true
+
+convBoolean2 = Boolean(' ');
+// console.log(convBoolean2); // true
+
+
+
+/*
+Value	String Conversion	Number Conversion	Boolean Conversion
+1	        "1"	                1	                true
+0	        "0"	                0	                false
+"1"	        "1"	                1	                true
+"0"	         "0"	            0	                true
+"ten"	    "ten"	            NaN	                true
+true	     "true"	             1	                true
+false	       "false"	          0	                false
+null	          "null"          0	                false
+undefined	     "undefined       NaN	                false
+''	                ""	           0	            false
+' '	                " "	           0	              true
+*/
