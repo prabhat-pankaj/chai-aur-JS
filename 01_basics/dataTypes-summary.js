@@ -35,3 +35,29 @@ const myFunction = function(){
 console.log(typeof anotherId);
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Stack (Primitive), Heap Memory (Non-primitive)
+
+let myYoutybe = "hiteshchoudharydotcom";
+
+let anotherName = myYoutybe;
+anotherName = "chai-aur-code";
+
+console.log(myYoutybe);
+console.log(anotherName);
+
+let userOne = {
+    email: "pk8556@gmail.com",
+    upi: "user@ybl"
+}
+
+let userTwo = userOne;
+
+userTwo.email = "prabhat@google.com";
+
+console.log(userOne);
+console.log(userTwo);
