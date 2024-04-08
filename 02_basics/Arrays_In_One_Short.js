@@ -68,3 +68,48 @@ let firstElement = courses.shift()
 // Removes 2 elements starting from index 1
 courses.splice(1, 2)
 // console.log('After Removed 2 elements starting from index 1: ' + courses);
+
+
+// 7. Array Length
+let myCourses = ['HTML', 'CSS', 'Javascript', 'React', 'Node.js']
+let leng = myCourses.length
+
+// console.log("Array Length: " + leng);
+
+// 8. Increase and Decrease the Array Length
+
+// myCourses.length = 7;
+
+// console.log('Array After Increase the Length: ', myCourses);
+
+// myCourses.length = 2;
+// console.log('Array After Decrease the Length: ', myCourses);
+
+
+// 9. Iterating Through Array Elements
+ for (let i = 0; i < myCourses.length; i++) {
+    // console.log(myCourses[i]);
+    
+ }
+
+ // Array.forEach() Loop
+ myCourses.forEach(function myFunc(e) {
+    // console.log(e);
+ })
+
+
+ // 10.  Array Concatenation
+
+ let otherCourses = ['Java', 'Express.js']
+
+ let concateArray = myCourses.concat(otherCourses)
+//  console.log('Concatenated Array: ', concateArray);
+
+
+// 11. Conversion od an Array to String
+
+console.log(myCourses.toString());
+
+
+// 12. Check the Type of an Arrays
+console.log(typeof myCourses);
