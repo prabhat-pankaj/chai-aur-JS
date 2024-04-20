@@ -40,3 +40,33 @@ function multiply(a, b) {
 }
 
 // console.log(multiply(69));
+
+function welcomeMsg(name) {
+    return ('Hello ' + 'Welcome to Geeksforgeeks')
+}
+
+let nameVal = 'Admin'
+// console.log(welcomeMsg(nameVal))
+
+
+function welcome(name) {
+    console.log('Hey ' + "" + name + ' ' + 'welcome to GfG') 
+}
+// welcome('Rohan')
+
+
+function add(a, b) {
+    return a + b
+}
+// console.log(add(8, 9))
+
+
+function msg(firstName) {
+    function hey() {
+        console.log("Hey " + firstName)
+    }
+
+    return hey()
+
+}
+msg("Ravi")
