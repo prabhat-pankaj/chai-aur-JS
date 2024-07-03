@@ -7,7 +7,7 @@ const repoCount = 50
 
 const gameName = new String('Vaishali-NIFT-com')
 
-// console.log(gameName[0]);
+// console.log(gameName[1]);
 // console.log(gameName.__proto__);
 
 
@@ -183,4 +183,4 @@ const reslt2 = String(strFunc2)
 // You can use the backslash escape character (\) to include special characters in a string.
 
 const myName = 'My name is \'Prabhat\'.'
-console.log(myName)
+// console.log(myName)
